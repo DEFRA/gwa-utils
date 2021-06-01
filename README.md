@@ -34,6 +34,13 @@ additional columns and differently named columns. Rather than messing around
 with an `xlsx` parser I opted for a little manual intervention to create a CSV
 with only the necessary columns i.e. those mentioned above.
 
+### [Create organisation list](./create-organisation-list.js)
+
+Generates a file to be uploaded to the `reference-data` container (in Cosmos
+DB) to be used by the GWA web app. The document contains a list of objects
+representing the organisations of Defra. Each organisation has an `orgCode` and
+`orgDescription`.
+
 ### [Generate initial file](./generate-initial-file.js)
 
 This generates a file used in the initial stage of sending messages i.e. it is
