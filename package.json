@@ -4,7 +4,9 @@
   "description": "GWA Utils",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "standard",
+    "test": "jest",
+    "test:watch": "jest --coverage=false --onlyChanged --watch"
   },
   "author": "st3v3nhunt",
   "license": "MIT",
@@ -16,5 +18,10 @@
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.1",
     "node-forge": "^0.10.0"
+  },
+  "devDependencies": {
+    "@jest/types": "^27.0.2",
+    "jest": "^27.0.4",
+    "standard": "^16.0.3"
   }
 }
