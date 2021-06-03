@@ -1,40 +1,24 @@
 #!/usr/bin/env node
 
-const fs = require('fs/promises')
+const readCsv = require('./lib/read-csv')
+const writeFile = require('./lib/write-file')
 
-async function createOrganisationList () {
-  console.time('createOrganisationList')
+async function createOrganisationList (data) {
+  data.forEach(x => {
+    delete x.type
+    x.active = x.active === 'Y'
+  })
   const id = 'organisationList'
-  const orgs = [{
-    orgCode: 'APHA',
-    orgDescription: 'Animal and Plant Health Agency'
-  }, {
-    orgCode: 'DEFRA',
-    orgDescription: 'Department for Environment, Food and Rural Affairs'
-  }, {
-    orgCode: 'EA',
-    orgDescription: 'Environment Agency'
-  }, {
-    orgCode: 'FC',
-    orgDescription: 'Forestry Commission'
-  }, {
-    orgCode: 'NE',
-    orgDescription: 'Natural England'
-  }]
 
-  const organisationList = { id, data: orgs }
-  const path = `./data/${id}.json`
-  await fs.writeFile(path, JSON.stringify(organisationList))
-  console.log(`Saved ${id} to '${path}'.`)
-  console.timeEnd('createOrganisationList')
+  return { id, data }
 }
 
 async function main () {
-  console.time('main')
+  const data = await readCsv('defra-organisation-list.csv', ['orgName', 'orgCode', 'type', 'active'])
 
-  await createOrganisationList()
+  const orgList = await createOrganisationList(data)
 
-  console.timeEnd('main')
+  await writeFile(orgList)
 }
 
 main().catch((e) => console.error(e))

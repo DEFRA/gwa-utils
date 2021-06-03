@@ -48,3 +48,4 @@ coverage
 data
 *.p12
 *.pem
+.DS_Store

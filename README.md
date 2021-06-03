@@ -45,10 +45,28 @@ with only the necessary columns i.e. those mentioned above.
 
 ### [Create organisation list](./create-organisation-list.js)
 
-Generates a file to be uploaded to the `reference-data` container (in Cosmos
+[csv-parse](https://csv.js.org/parse/) is used to convert a CSV file containing
+the organisations. Specifically `name`, `code` and whether they are
+`active`. The `active` flag is for the purposes of whether the organisation has
+been enrolled in the system and whether it should be displayed when sending
+messages.
+
+A file generated to be uploaded to the `reference-data` container (in Cosmos
 DB) to be used by the GWA web app. The document contains a list of objects
 representing the organisations of Defra. Each organisation has an `orgCode` and
-`orgDescription`.
+`orgName`.
+
+### [Create organisation map](./create-organisation-map.js)
+
+[csv-parse](https://csv.js.org/parse/) is used to convert a CSV file that
+contains a mapping of raw organisation inputs into what the actual organisation
+is. This is used to map the organisation a user has recorded to a known good
+representation during the ETL processing.
+
+A file generated to be uploaded to the `reference-data` container (in Cosmos
+DB) to be used by the GWA ETL function app. The document contains a list of
+objects representing the mappings. Each mapping has `originalOrgName`,
+`orgName` and `orgCode`.
 
 ### [Generate initial file](./generate-initial-file.js)
 
