@@ -1,5 +1,14 @@
 # Group Wide Alerting (GWA) Utilities
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)\
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-utils&metric=coverage)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-utils)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-utils&metric=sqale_index)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-utils)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-utils&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-utils)\
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-utils&metric=security_rating)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-utils)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=DEFRA_gwa-utils&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=DEFRA_gwa-utils)
+[![Known Vulnerabilities](https://snyk.io/test/github/defra/gwa-utils/badge.svg)](https://snyk.io/test/github/defra/gwa-utils)
+
 > A collection of utility scripts to help with generating test data, test
 > workloads, reference data and other useful stuff for GWA.
 
