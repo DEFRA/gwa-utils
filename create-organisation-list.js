@@ -7,6 +7,7 @@ async function createOrganisationList (data) {
   data.forEach(x => {
     delete x.type
     x.active = x.active === 'Y'
+    x.core = x.core === 'Y'
   })
   const id = 'organisationList'
 
@@ -14,7 +15,7 @@ async function createOrganisationList (data) {
 }
 
 async function main () {
-  const data = await readCsv('defra-organisation-list.csv', ['orgName', 'orgCode', 'type', 'active'])
+  const data = await readCsv('defra-organisation-list.csv', ['orgName', 'orgCode', 'type', 'active', 'core'])
 
   const orgList = await createOrganisationList(data)
 
