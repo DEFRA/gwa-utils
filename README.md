@@ -46,10 +46,13 @@ with only the necessary columns i.e. those mentioned above.
 ### [Create organisation list](./create-organisation-list.js)
 
 [csv-parse](https://csv.js.org/parse/) is used to convert a CSV file containing
-the organisations. Specifically `name`, `code` and whether they are
-`active`. The `active` flag is for the purposes of whether the organisation has
+the organisations. Specifically `name` and `code` and whether they are
+`active` and a `core` organisation (to GWA).
+The `active` flag is used for the purpose of whether the organisation has
 been enrolled in the system and whether it should be displayed when sending
 messages.
+The `core` flag is used for the purpose of whether the organisation is core to
+the GWA service and is used within the web app and ETL.
 
 A file generated to be uploaded to the `reference-data` container (in Cosmos
 DB) to be used by the GWA web app. The document contains a list of objects
