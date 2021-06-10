@@ -4,10 +4,6 @@ const readCsv = require('./lib/read-csv')
 const writeFile = require('./lib/write-file')
 
 async function createOrganisationMap (data) {
-  // data.forEach(x => {
-  //   delete x.type
-  //   x.active = x.active === 'Y'
-  // })
   const id = 'organisationMap'
 
   return { id, data }
