@@ -43,7 +43,7 @@ async function createAreaToOfficeMap (officeLocationList) {
     return 0
   })
   const areaToOfficeMap = { id, data: areaToOfficeMapSorted }
-  const path = `./data/${id}.json`
+  const path = `./data/output/${id}.json`
   await fs.writeFile(path, JSON.stringify(areaToOfficeMap))
   console.log(`Saved ${id} to '${path}'.`)
   console.timeEnd('createAreaToOfficeMap')
@@ -61,7 +61,7 @@ async function createStandardisedOfficeLocationMap (officeLocations) {
     return 0
   })
   const areaToOfficeMap = { id, data: standardisedOfficeLocationMap }
-  const path = `./data/${id}.json`
+  const path = `./data/output/${id}.json`
   await fs.writeFile(path, JSON.stringify(areaToOfficeMap))
   console.log(`Saved ${id} to '${path}'.`)
   console.timeEnd('createStandardisedOfficeLocationMap')
