@@ -14,7 +14,7 @@ async function createAreaToOfficeMap (officeLocationList) {
   officeLocationList.forEach(ol => {
     const areaCode = ol.areaCode
     const area = areaGroupedOfficeMap.get(areaCode)
-    const office = { officeCode: createOfficeCode(ol), officeLocation: ol.officeLocation, originalOfficeLocation: ol.originalOfficeLocation }
+    const office = { officeCode: createOfficeCode(ol), officeLocation: ol.officeLocation }
     if (area) {
       // Ensure no officeCodes are duplicated
       const officeLocations = area.officeLocations.get(office.officeCode)
