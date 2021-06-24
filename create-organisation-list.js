@@ -8,6 +8,8 @@ async function createOrganisationList (data) {
     delete x.type
     x.active = x.active === 'Y'
     x.core = x.core === 'Y'
+    x.orgCode = x.orgCode.trim()
+    x.orgName = x.orgName.trim()
   })
   const id = 'organisationList'
 
