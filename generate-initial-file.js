@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs/promises')
+const { v4: uuid } = require('uuid')
 
 const [, , listSize] = process.argv
 const numberOfContacts = listSize ?? 100
@@ -19,7 +20,7 @@ const text = 'This is a test message. It is being sent via Notify using an API k
 
 const msg = {
   message: {
-    id: `msg-id-${listSize}`,
+    id: uuid(),
     text
   },
   contacts
