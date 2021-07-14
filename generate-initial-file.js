@@ -25,7 +25,7 @@ const msg = {
   contacts
 }
 
-const dataDir = './data'
+const dataDir = './data/output'
 const filePath = `${dataDir}/initial-${numberOfContacts}-contacts.json`
 
 async function main () {
