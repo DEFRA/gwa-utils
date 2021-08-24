@@ -81,3 +81,8 @@ message and 100 contacts with unique mobile phone numbers. The script will
 generate as many contacts as required when supplied as the first argument to
 the script e.g.  `./generate-initial-file.js 500`. The files created in
 [data](./data) and named `initial-<number-of-contacts>-contacts.json`.
+
+### [Process users](./process-users.js)
+
+Download the `valid-users.json` file from the ETL storage account. Process the
+file, extracting a set of properties for each user and save a CSV file.

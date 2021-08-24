@@ -13,9 +13,11 @@
   "dependencies": {
     "@azure/cosmos": "^3.10.6",
     "@azure/msal-node": "^1.0.3",
+    "@azure/storage-blob": "^12.7.0",
     "@azure/storage-queue": "^12.4.0",
     "csv-parse": "^4.15.4",
     "dotenv": "^8.2.0",
+    "json2csv": "^5.0.6",
     "node-fetch": "^2.6.1",
     "node-forge": "^0.10.0",
     "uuid": "^8.3.2"
