@@ -84,5 +84,8 @@ the script e.g.  `./generate-initial-file.js 500`. The files created in
 
 ### [Process users](./process-users.js)
 
-Download the `valid-users.json` file from the ETL storage account. Process the
-file, extracting a set of properties for each user and save a CSV file.
+Download a supported file e.g. `valid-users.json` from the ETL storage account.
+Process the file, extracting a set of properties for each user and save a CSV
+file.
+
+Run with `./process-users.js valid-users`.
