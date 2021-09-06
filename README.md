@@ -89,3 +89,13 @@ Process the file, extracting a set of properties for each user and save a CSV
 file.
 
 Run with `./process-users.js valid-users`.
+
+### [Retrieve AAD data](./retrieve-aad-data.js)
+
+Download user data from Azure Active Directory (AAD) via
+[Microsoft Graph API](https://microsoft.graph.com). Using the
+[list users](https://docs.microsoft.com/en-us/graph/api/user-list?) endpoint.
+Running this script generates a file with the raw data from the API i.e. no
+cleansing of `companyName` or `officeLocation` has been completed.
+
+Run with `./retrieve-aad-data.js'
