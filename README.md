@@ -98,4 +98,15 @@ Download user data from Azure Active Directory (AAD) via
 Running this script generates a file with the raw data from the API i.e. no
 cleansing of `companyName` or `officeLocation` has been completed.
 
-Run with `./retrieve-aad-data.js'
+Run with `./retrieve-aad-data.js`.
+
+### [Retrieve AW data](./retrieve-aw-data.js)
+
+Download user data from
+[AirWatch REST API](https://resources.workspaceone.com/view/zv5cgwjrcv972rd6fmml/en),
+using the `DevicesV2` (`/devices/search`) endpoint.
+
+Each object returned contains many properties that are not used by the ETL
+function app. This script will save the full object for inspection.
+
+Run with `./retrieve-aw-data.js`.
